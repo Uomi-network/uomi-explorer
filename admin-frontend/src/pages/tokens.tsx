@@ -391,9 +391,10 @@ function TokensPage() {
       fetchTokenStats();
     } catch (error) {
       console.error('Errore nell\'aggiornamento del token:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Errore sconosciuto';
       toast({
         title: 'Errore',
-        description: `Impossibile aggiornare il token: ${error.message}`,
+        description: `Impossibile aggiornare il token: ${errorMessage}`,
         status: 'error',
         duration: 5000,
         isClosable: true,
@@ -402,13 +403,13 @@ function TokensPage() {
   };
   
   // Formatta l'indirizzo per la visualizzazione
-  const formatAddress = (address) => {
+  const formatAddress = (address: string) => {
     if (!address) return '';
     return `${address.substring(0, 6)}...${address.substring(address.length - 4)}`;
   };
   
   // Ottieni il badge per il tipo di token
-  const getTypeBadge = (type) => {
+  const getTypeBadge = (type: string) => {
     switch (type) {
       case 'ERC-20':
         return <Badge colorScheme="green">{type}</Badge>;
