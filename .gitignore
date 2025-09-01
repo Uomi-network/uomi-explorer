@@ -78,7 +78,7 @@ tasks_in_progress
 
 docker-compose/services/blockscout-web-data
 docker-compose/services/data
-docker-compose/envs/common-blockscout.env.example
+docker-compose/envs/common-blockscout.env
 
 node_modules
 admin-frontend/node_modules
