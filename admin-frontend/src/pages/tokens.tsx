@@ -522,7 +522,7 @@ function TokensPage() {
                           </Td>
                           <Td>{token.name || 'N/A'}</Td>
                           <Td>{token.symbol || 'N/A'}</Td>
-                          <Td>{getTypeBadge(token.type)}</Td>
+                          <Td>{getTypeBadge(token.type || 'Sconosciuto')}</Td>
                           <Td>
                             <Tooltip label={token.address}>
                               <Text>{formatAddress(token.address)}</Text>
@@ -694,7 +694,7 @@ function TokensPage() {
                             </Td>
                             <Td>{token.name || 'N/A'}</Td>
                             <Td>{token.symbol || 'N/A'}</Td>
-                            <Td>{getTypeBadge(token.type)}</Td>
+                            <Td>{getTypeBadge(token.type || 'Sconosciuto')}</Td>
                             <Td>
                               <Tooltip label={token.address}>
                                 <Text>{formatAddress(token.address)}</Text>
