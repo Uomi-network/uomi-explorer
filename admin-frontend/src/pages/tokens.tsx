@@ -249,21 +249,21 @@ function TokensPage() {
   }, []);
   
   // Gestisci la ricerca
-  const handleSearch = (e) => {
+  const handleSearch = (e: any) => {
     const value = e.target.value;
     setSearchTerm(value);
     setCurrentPage(1); // Reset alla prima pagina quando cambia la ricerca
   };
   
   // Gestisci il cambio del filtro tipo
-  const handleTypeFilter = (e) => {
+  const handleTypeFilter = (e: any) => {
     const value = e.target.value;
     setTypeFilter(value);
     setCurrentPage(1);
   };
   
   // Gestisci l'ordinamento delle colonne
-  const handleSort = (key) => {
+  const handleSort = (key: string) => {
     let direction = 'ASC';
     if (sortConfig.key === key && sortConfig.direction === 'ASC') {
       direction = 'DESC';
@@ -272,7 +272,7 @@ function TokensPage() {
   };
   
   // Apri il drawer per modificare un token
-  const handleEditToken = (token) => {
+  const handleEditToken = (token: any) => {
     setSelectedToken(token);
     setTokenForm({
       name: token.name || '',
@@ -285,19 +285,19 @@ function TokensPage() {
   };
   
   // Gestisci il cambio del campo nel form
-  const handleFormChange = (e) => {
+  const handleFormChange = (e: any) => {
     const { name, value } = e.target;
     setTokenForm(prev => ({ ...prev, [name]: value }));
   };
   
   // Gestisci il cambio degli switch
-  const handleSwitchChange = (e) => {
+  const handleSwitchChange = (e: any) => {
     const { name, checked } = e.target;
     setTokenForm(prev => ({ ...prev, [name]: checked }));
   };
   
   // Gestisci il cambio dell'icona
-  const handleIconChange = (e) => {
+  const handleIconChange = (e: any) => {
     const file = e.target.files[0];
     if (file) {
       setTokenIcon(file);
