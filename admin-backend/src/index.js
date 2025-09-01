@@ -33,7 +33,7 @@ const app = express();
 app.use(helmet());
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://admin.uomi-explorer.com'] 
+    ? ['https://admin.explorer-finney.uomi.ai', 'https://admin.explorer.uomi.ai'] 
     : ['http://localhost:3010'],
   credentials: true
 }));
