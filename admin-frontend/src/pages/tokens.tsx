@@ -84,6 +84,20 @@ interface Token {
   created_at?: string;
 }
 
+interface TokenStats {
+  stats: {
+    total_tokens: number;
+    tokens_with_icons: number;
+    verified_tokens: number;
+    token_types: number;
+  };
+  typeDistribution: Array<{
+    type: string | null;
+    count: number;
+  }>;
+  recentTokens: Token[];
+}
+
 function TokensPage() {
   const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -107,7 +121,7 @@ function TokensPage() {
   const [selectedToken, setSelectedToken] = useState<Token | null>(null);
   
   // Statistiche
-  const [tokenStats, setTokenStats] = useState(null);
+  const [tokenStats, setTokenStats] = useState<TokenStats | null>(null);
   const [statsLoading, setStatsLoading] = useState(true);
   
   // Form di modifica token
