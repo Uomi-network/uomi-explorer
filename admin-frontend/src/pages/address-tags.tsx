@@ -554,7 +554,7 @@ const AddressTagsPage = () => {
                             <Td>
                               <Tooltip label={address.address}>
                                 <Text isTruncated maxW="150px">
-                                  <Link href={`https://explorer.uomi.io/address/${address.address}`} isExternal>
+                                  <Link href={`https://explorer-finney.uomi.ai/address/${address.address}`} isExternal>
                                     {address.address}{" "}
                                     <ExternalLinkIcon mx="2px" />
                                   </Link>
@@ -728,7 +728,7 @@ const AddressTagsPage = () => {
           <DrawerBody>
             <Stack spacing={4}>
               <Text fontWeight="bold">Indirizzo:</Text>
-              <Link href={`https://explorer.uomi.io/address/${selectedAddress}`} isExternal color="blue.500">
+              <Link href={`https://explorer-finney.uomi.ai/address/${selectedAddress}`} isExternal color="blue.500">
                 {selectedAddress} <ExternalLinkIcon mx="2px" />
               </Link>
               

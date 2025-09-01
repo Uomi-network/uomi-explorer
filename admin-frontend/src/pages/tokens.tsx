@@ -521,7 +521,7 @@ function TokensPage() {
                               />
                               <IconButton
                                 as="a"
-                                href={`${process.env.NEXT_PUBLIC_EXPLORER_URL || 'https://explorer.uomi.io'}/token/${token.address}`}
+                                href={`${process.env.NEXT_PUBLIC_EXPLORER_URL || 'https://explorer-finney.uomi.ai'}/token/${token.address}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 icon={<FiExternalLink />}
