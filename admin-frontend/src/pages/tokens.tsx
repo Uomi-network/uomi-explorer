@@ -90,7 +90,7 @@ function TokensPage() {
   const { getAccessTokenSilently } = useAuth0();
   
   // Stati per la gestione dei token
-  const [tokens, setTokens] = useState([]);
+  const [tokens, setTokens] = useState<Token[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [totalTokens, setTotalTokens] = useState(0);
