@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Box, 
   Heading, 
@@ -846,8 +846,15 @@ function TokensPage() {
   );
 }
 
+interface StatCardProps {
+  title: string;
+  value: number;
+  icon: any;
+  color: string;
+}
+
 // Componente StatCard
-function StatCard({ title, value, icon, color }) {
+function StatCard({ title, value, icon, color }: StatCardProps) {
   return (
     <Card 
       transition="all 0.2s"
