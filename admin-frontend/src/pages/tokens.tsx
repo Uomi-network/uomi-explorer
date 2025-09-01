@@ -714,7 +714,7 @@ function TokensPage() {
                                 <Text>{formatAddress(token.address)}</Text>
                               </Tooltip>
                             </Td>
-                            <Td>{new Date(token.inserted_at).toLocaleDateString()}</Td>
+                            <Td>{token.created_at ? new Date(token.created_at).toLocaleDateString() : 'N/A'}</Td>
                           </Tr>
                         ))}
                       </Tbody>
