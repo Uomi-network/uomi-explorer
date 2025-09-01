@@ -201,7 +201,7 @@ function TokensPage() {
       
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4010';
       const queryParams = new URLSearchParams({
-        page: currentPage,
+        page: currentPage.toString(),
         limit,
         search: searchTerm,
         type: typeFilter,
