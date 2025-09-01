@@ -32,9 +32,7 @@ const app = express();
 // Set up security and utility middleware
 app.use(helmet());
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://admin.explorer-finney.uomi.ai', 'https://admin.explorer.uomi.ai'] 
-    : ['http://localhost:3010'],
+  origin: ['https://admin.explorer-finney.uomi.ai', 'https://admin.explorer.uomi.ai', 'http://localhost:3010'],
   credentials: true
 }));
 app.use(express.json());
