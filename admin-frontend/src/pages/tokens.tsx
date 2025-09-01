@@ -352,7 +352,7 @@ function TokensPage() {
         formData.append('icon', tokenIcon);
       }
       
-      const response = await fetch(`${apiUrl}/api/tokens/${selectedToken.address}`, {
+      const response = await fetch(`${apiUrl}/api/tokens/${selectedToken!.address}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`
