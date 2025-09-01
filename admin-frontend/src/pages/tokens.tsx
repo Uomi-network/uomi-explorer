@@ -72,6 +72,18 @@ import Layout from '@/components/Layout';
 import withAuth from '@/components/withAuth';
 import Pagination from '@/components/Pagination';
 
+interface Token {
+  address: string;
+  name?: string;
+  symbol?: string;
+  type?: string;
+  is_verified_via_admin_panel?: boolean;
+  skip_metadata?: boolean;
+  icon_url?: string;
+  updated_at?: string;
+  created_at?: string;
+}
+
 function TokensPage() {
   const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -92,7 +104,7 @@ function TokensPage() {
   });
   
   // Token selezionato per modifica
-  const [selectedToken, setSelectedToken] = useState(null);
+  const [selectedToken, setSelectedToken] = useState<Token | null>(null);
   
   // Statistiche
   const [tokenStats, setTokenStats] = useState(null);
@@ -272,7 +284,7 @@ function TokensPage() {
   };
   
   // Apri il drawer per modificare un token
-  const handleEditToken = (token: any) => {
+  const handleEditToken = (token: Token) => {
     setSelectedToken(token);
     setTokenForm({
       name: token.name || '',
