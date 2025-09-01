@@ -334,8 +334,8 @@ function TokensPage() {
       const formData = new FormData();
       formData.append('name', tokenForm.name);
       formData.append('symbol', tokenForm.symbol);
-      formData.append('is_verified_via_admin_panel', tokenForm.is_verified_via_admin_panel);
-      formData.append('skip_metadata', tokenForm.skip_metadata);
+      formData.append('is_verified_via_admin_panel', tokenForm.is_verified_via_admin_panel.toString());
+      formData.append('skip_metadata', tokenForm.skip_metadata.toString());
       
       if (tokenIcon) {
         formData.append('icon', tokenIcon);
