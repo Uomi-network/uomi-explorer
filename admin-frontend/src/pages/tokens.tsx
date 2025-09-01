@@ -70,7 +70,7 @@ import {
 import { useAuth0 } from '@auth0/auth0-react';
 import Layout from '@/components/Layout';
 import withAuth from '@/components/withAuth';
-import { Pagination } from '@/components/Pagination';
+import Pagination from '@/components/Pagination';
 
 function TokensPage() {
   const toast = useToast();
