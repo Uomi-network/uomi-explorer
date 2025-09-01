@@ -305,7 +305,9 @@ function TokensPage() {
       // Crea anteprima
       const reader = new FileReader();
       reader.onloadend = () => {
-        setIconPreview(reader.result);
+        if (typeof reader.result === 'string') {
+          setIconPreview(reader.result);
+        }
       };
       reader.readAsDataURL(file);
     }
