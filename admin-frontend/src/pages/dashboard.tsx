@@ -57,7 +57,7 @@ function Dashboard() {
     }
     
     console.log(`Chiamata API con autenticazione: ${url}`);
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4010';
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://api.admin.explorer-finney.uomi.ai';
     
     // Assicurati che l'url inizi con una barra se non presente
     const formattedUrl = url.startsWith('/') ? url : `/${url}`;
@@ -142,7 +142,7 @@ function Dashboard() {
           
           // Make a request to our backend to get user profile
           const response = await fetch(
-            `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4010'}/api/auth/me`,
+            `${process.env.NEXT_PUBLIC_API_URL || 'https://api.admin.explorer-finney.uomi.ai'}/api/auth/me`,
             {
               headers: {
                 Authorization: `Bearer ${token}`

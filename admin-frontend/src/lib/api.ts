@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.API_URL || 'http://localhost:4010/api';
+const API_URL = process.env.API_URL || 'https://api.admin.explorer-finney.uomi.ai';
 
 // Create a custom axios instance
 const api = axios.create({

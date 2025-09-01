@@ -71,7 +71,7 @@ function AppContent({ Component, pageProps }: AppProps) {
               console.log(`Richiesta API: ${url}, Token presente: ${!!token}`);
               
               const response = await axios.get(url, {
-                baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4010',
+                baseURL: process.env.NEXT_PUBLIC_API_URL || 'https://api.admin.explorer-finney.uomi.ai',
                 headers: {
                   'Content-Type': 'application/json',
                   'Authorization': token ? `Bearer ${token}` : '',
@@ -126,7 +126,7 @@ export default function App(props: AppProps) {
           AUTH0_AUDIENCE: 'https://uomi.us.auth0.com/api/v2/',
           AUTH0_REDIRECT_URI: window.location.origin + '/callback',
           AUTH0_SCOPE: 'openid profile email',
-          API_URL: 'http://localhost:4010/api'
+          API_URL: 'https://api.admin.explorer-finney.uomi.ai/api'
         };
         console.log('Utilizzo configurazione di fallback:', Object.keys(fallbackConfig));
         setConfig(fallbackConfig);

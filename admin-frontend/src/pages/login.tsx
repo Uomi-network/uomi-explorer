@@ -52,7 +52,7 @@ export default function Login() {
     try {
       // Chiamata all'API backend per iniziare il flusso passwordless
       const response = await axios.post('/api/auth/passwordless/start', { email }, {
-        baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4010',
+        baseURL: process.env.NEXT_PUBLIC_API_URL || 'https://api.admin.explorer-finney.uomi.ai',
       });
       
       if (response.data.success === false) {
@@ -183,7 +183,7 @@ export default function Login() {
         email: cleanEmail, 
         otp: cleanCode
       }, {
-        baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4010',
+        baseURL: process.env.NEXT_PUBLIC_API_URL || 'https://api.admin.explorer-finney.uomi.ai',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'

@@ -106,7 +106,7 @@ const AuthGuard = ({ children }: AuthGuardProps) => {
 
           // Verify with backend
           await axios.get('/api/auth/status', {
-            baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4010',
+            baseURL: process.env.NEXT_PUBLIC_API_URL || 'https://api.admin.explorer-finney.uomi.ai',
             headers: {
               Authorization: `Bearer ${token}`
             }

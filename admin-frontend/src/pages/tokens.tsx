@@ -181,7 +181,7 @@ function TokensPage() {
         return;
       }
       
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4010';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://api.admin.explorer-finney.uomi.ai';
       const response = await fetch(`${apiUrl}/api/tokens/stats`, {
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -225,7 +225,7 @@ function TokensPage() {
         return;
       }
       
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4010';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://api.admin.explorer-finney.uomi.ai';
       const queryParams = new URLSearchParams({
         page: currentPage.toString(),
         limit: limit.toString(),
@@ -306,7 +306,7 @@ function TokensPage() {
       is_verified_via_admin_panel: token.is_verified_via_admin_panel || false,
       skip_metadata: token.skip_metadata || false
     });
-    setIconPreview(token.icon_url ? `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4010'}${token.icon_url}` : '');
+    setIconPreview(token.icon_url ? `${process.env.NEXT_PUBLIC_API_URL || 'https://api.admin.explorer-finney.uomi.ai'}${token.icon_url}` : '');
     onOpen();
   };
   
@@ -365,7 +365,7 @@ function TokensPage() {
         return;
       }
       
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4010';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://api.admin.explorer-finney.uomi.ai';
       
       // Crea un FormData per l'invio del file
       const formData = new FormData();
@@ -523,7 +523,7 @@ function TokensPage() {
                           <Td>
                             {token.icon_url ? (
                               <Image 
-                                src={`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4010'}${token.icon_url}`} 
+                                src={`${process.env.NEXT_PUBLIC_API_URL || 'https://api.admin.explorer-finney.uomi.ai'}${token.icon_url}`} 
                                 alt={token.name}
                                 boxSize="40px"
                                 borderRadius="full"
@@ -695,7 +695,7 @@ function TokensPage() {
                             <Td>
                               {token.icon_url ? (
                                 <Image 
-                                  src={`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4010'}${token.icon_url}`} 
+                                  src={`${process.env.NEXT_PUBLIC_API_URL || 'https://api.admin.explorer-finney.uomi.ai'}${token.icon_url}`} 
                                   alt={token.name}
                                   boxSize="30px"
                                   borderRadius="full"

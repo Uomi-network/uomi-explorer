@@ -4,5 +4,5 @@
   "AUTH0_AUDIENCE": "https://uomi.us.auth0.com/api/v2/",
   "AUTH0_REDIRECT_URI": "http://localhost:3010/callback",
   "AUTH0_SCOPE": "openid profile email",
-  "API_URL": "http://localhost:4010/api"
+  "API_URL": "https://api.admin.explorer-finney.uomi.ai/api"
 }
