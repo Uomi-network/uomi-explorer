@@ -316,6 +316,17 @@ function TokensPage() {
   // Salva le modifiche al token
   const handleSaveToken = async () => {
     try {
+      if (!selectedToken) {
+        toast({
+          title: 'Errore',
+          description: 'Nessun token selezionato',
+          status: 'error',
+          duration: 5000,
+          isClosable: true,
+        });
+        return;
+      }
+
       const token = await getToken();
       if (!token) {
         toast({
